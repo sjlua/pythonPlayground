@@ -1,6 +1,10 @@
 '''
 A hexadecimal converter that receives an integer from the user via the command line, 
-then prints it in a hexadecimal format.
+then prints it in a hexadecimal format. 
+
+Update 2
+- Cleaned up the code.
+- Fixed logic, so now works theoretically forever, unlike before where it wouldn't work on 10,000, 100K etc.
 '''
 
 # The hexadecimal dictionary.
@@ -11,23 +15,18 @@ finalResult = ""
 # Asks the user for a number.
 userEnteredNumber = int(input("Input an integer: "))
 
-# A loop that runs until the remainder = 0, meaning the full hexadecimal has been found.
-if userEnteredNumber % 16 != 0:
-	# The fast method uses the remainder to find part of the hexadecimal and appends from left to right.
-	while userEnteredNumber % 16 != 0:
-		# Takes the remainder, uses it as an index number and finds the corresponding hexadecimal,
-		# then appending it to the final resultHexadecimal.
-		resultHexadecimal = str(resultHexadecimal) + str(hexadecimalsList[userEnteredNumber % 16])
-		# Takes the quotient and stores it in the variable to recursively divide by 16 until remainder = 0.
-		userEnteredNumber = userEnteredNumber // 16
+# If the number entered is 0, the hexadecimal is 0. 
+if (userEnteredNumber == 0):
+    resultHexadecimal = "0"
 
-# As multiples of 16 do not have a remainder (eg. 32/6 = 2), the following condition must exist.
-elif userEnteredNumber % 16 == 0:
-	resultHexadecimal = "0"
-	# Adds the result to the hexadecimal.
-	resultHexadecimal = str(resultHexadecimal) + str(userEnteredNumber // 16)
+# This loop runs until the quotient is equal to 0.
+while (userEnteredNumber != 0):
+    # Concatenates the current remainder to the current hexadecimal result.
+    resultHexadecimal += str(hexadecimalsList[userEnteredNumber % 16])
+    # Stores the quotient for the next division.
+    userEnteredNumber = userEnteredNumber // 16
 
-# Reverses the resultHexadecimal, as hexadecimals are filled in right to left, not left to right! ty google
+# Reverses the resultHexadecimal, as hexadecimals are filled in right to left, not left to right!
 finalResult = resultHexadecimal[::-1]
 
 # Finally, the hexadecimal is displayed.

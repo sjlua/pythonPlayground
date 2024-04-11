@@ -1,5 +1,6 @@
-''' Algorithm for Decimal to Binary conversion
-Logic: https://www.wikihow.com/Convert-from-Decimal-to-Binary
+''' 
+Algorithm for Decimal to Binary conversion
+Wikihow: https://www.wikihow.com/Convert-from-Decimal-to-Binary
 '''
 # Asks for an integer.
 decimal = int(input("Input an integer: "))
