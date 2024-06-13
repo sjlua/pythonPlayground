@@ -1,5 +1,7 @@
-'''Algorithm for GCD
+'''
+Algorithm for GCD
 Khan Academy: https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
+- This prints out the actual steps so you can see how it works if you were to do it on paper.
 '''
 
 # User enters a (+ve integer)
@@ -31,6 +33,7 @@ def gcdivisor(a, b):
         a = b # Stores the next potential GCD.
         b = remainder
     
+    # The a value after the while loop is the previous b value, which would be the gcd.
     return a
 
 # Displays the final result.
