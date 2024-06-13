@@ -1,5 +1,7 @@
-# Python Playrgound
+# Python Playground
 Various Python scripts that I have made, practising my python skills, which may be useful for someone out there.
+
+![Static Badge](https://img.shields.io/badge/releases-releases?style=flat&logo=python&logoColor=ffde57&label=playground&color=%234584b6&link=%3Cobject%3Ehttps%3A%2F%2Fgithub.com%2Fsirsleon%2FpythonPlayground%2Freleases%3C%2Fobject%3E)
 
 ## Description
 Started in 2024, this is a collection of python programming for random functions I wanted to simplify my life, particularly for my CS course. Or just random hobby functions that I wanted to test out.
@@ -10,7 +12,7 @@ Started in 2024, this is a collection of python programming for random functions
 * Python 3.11
 * An IDE or an application such as Microsoft's VSCode or VSCodium.
 
-### Installing
+### Installation
 
 * Download the zip.
 * Unzip the package.
@@ -36,6 +38,8 @@ Sean Lua
 
 ## Version History
 
+* 0.4.1
+    * Improved README.
 * 0.4
     * Added linearSearch (for integers).
     * Added gbConverter.
