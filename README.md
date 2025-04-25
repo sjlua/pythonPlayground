@@ -39,6 +39,9 @@ Sean Lua
 
 ## Version History
 
+* 0.6
+    * Added zigzag.
+    * Added improved version of 1twoSum.
 * 0.5
     * Added systemsToMatrices.
     * Improved the docstring of 2469celsiusConverter.
